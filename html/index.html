@@ -5,19 +5,28 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://hasaki.vn/favicon/favicon.ico">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500,900&subset=latin,vietnamese,latin-ext">
     <link rel="stylesheet" href="/css/components.css">
     <link rel="stylesheet" href="/css/app.css">
 </head>
 
 <body>
-    <div class="hamburger_menu">
+    <!-- MOBILE MENU -->
+    <div id="hamburger_menu" class="hamburger_menu">
         <div class="top_bar">
             <div class="flex_row">
                 <div class="item_user">
                     <img class="icon" src="https://hasaki.vn/images/graphics/icon_header_2.svg" alt="">
                     Xin chao, Dang Nghiep Cuong!
                 </div>
-                <div class="flex_item"><i class="arrow left"></i></div>
+                <div class="flex_item"><i id="menu_close_arrow" class="arrow left"></i></div>
             </div>
         </div>
         <div class="list_menu_main">
@@ -106,7 +115,7 @@
     <div class="header">
         <div class="container">
             <!-- MOBILE COMPONENTS -->
-            <div class="header_hamburger_button">
+            <div id="header_hamburger_button" class="header_hamburger_button">
                 ____
                 <br>
                 ____
@@ -126,7 +135,7 @@
                 </div>
                 <div class="header_center">
                     <div class="flex_row">
-                        <ul class="push_campain_keywords">
+                        <ul class="push_campaign_keywords">
                             <li><a href="">Kem chong nang</a></li>
                             <li><a href="">Tay trang</a></li>
                             <li><a href="">Toner</a></li>
@@ -183,6 +192,8 @@
             </div>
         </div>
     </div>
+
+    <!-- DESKTOP MENU -->
     <div class="top_menu">
         <div class="content">
             <a href="#" class="hamburger">DANH MUC</a>
@@ -200,9 +211,108 @@
             <a href="#">Dia chi</a>
         </div>
     </div>
-    <div style="height: 2000px;">
 
+    <div id="campaign_area">
+        <div class="flex_row">
+            <div class="slider">
+                <div class="container">
+                    <ul class="slides">
+                        <li class="slide">
+                            <a class="banner_link" href="https://hasaki.vn/campaign/khai-truong-chi-nhanh-193-194">
+                                <img class="banner" src="https://media.hcdn.vn/hsk/1716890808banner-home-mobile.png"
+                                    alt="">
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="banner_link"
+                                href="https://hasaki.vn/campaign/uu-dai-triet-long-he-them-soi-dong?utm_source=website&utm_medium=banner_home&utm_campaign=campain_uu_dai_triet_long_he_them_soi_dong_07052024">
+                                <img class="banner" src="https://media.hcdn.vn/hsk/1714730690app.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="banner_link"
+                                href="https://hasaki.vn/cam-nang/chot-don-don-he-deal-0-dong-ne-4137.html?utm_source=website&utm_medium=banner_home&utm_campaign=cam-nang-chot-don-don-he-deal-0-dong-ne-04042024">
+                                <img class="banner"
+                                    src="https://media.hcdn.vn/hsk/1712203188640x240-banner-home-wap.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="banner_link" href="https://hasaki.vn/danh-muc/tay-trang-mat-c48.html">
+                                <img class="banner" src="https://media.hcdn.vn/hsk/1717665764wapcogiataytrang.jpg"
+                                    alt="">
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="banner_link" href="https://hasaki.vn/thuong-hieu/garnier.html">
+                                <img class="banner" src="https://media.hcdn.vn/hsk/1717741867ganierwap.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="banner_right">
+                <div class="banner_item">
+                    <a href="">
+                        <img src="https://media.hcdn.vn/hsk/1716978333nowfree-3-846x250.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="banner_item">
+                    <a href="">
+                        <img src="https://media.hcdn.vn/hsk/1653555653banner-check-gia-web-v2-435x128.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="home_page_content">
+        <div class="category_buttons">
+            <div class="col">
+                <a class="category_button categories" href="">
+                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-danh-muc.png" alt="">
+                    Danh muc
+                </a>
+                <a class="category_button order_tracking" href="">
+                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-tra-cuu-don-hang.png" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a class="category_button new_arrivals" href="">
+                    <img src="https://media.hcdn.vn/hsk/icon/hsk-icon-hang-moi-ve.png" alt="">
+                </a>
+                <a class="category_button best_selling" href="">
+                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-number-1.png" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a class="category_button ship_now" href="">
+                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-nowfree.png" alt="">
+                </a>
+                <a class="category_button hot_sales" href="">
+                    <img src="https://media.hcdn.vn/hsk/icon/hsk-icon-sale-80.png" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a class="category_button clinic_spa" href="">
+                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-clinic.png" alt="">
+                </a>
+                <a class="category_button booking" href="">
+                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-dat-hen.png" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a class="category_button prices" href="">
+                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-bang-gia.png" alt="">
+                </a>
+                <a class="category_button guidebook" href="">
+                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-cam-nang.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

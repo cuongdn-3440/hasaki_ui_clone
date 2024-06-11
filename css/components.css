@@ -7,6 +7,7 @@ a {
     height: 70px;
     position: fixed;
     background-color: #326e52;
+    z-index: 10;
 }
 
 .header>.container {
@@ -17,6 +18,7 @@ a {
 
 .header>.container>.header_hamburger_button {
     display: none;
+    height: 40px;
     position: relative;
     float: left;
     top: 15px;
@@ -37,7 +39,6 @@ a {
 .header_left {
     display: flex;
     height: 100%;
-    margin: 0 10px;
 }
 
 .header_left a {
@@ -46,6 +47,7 @@ a {
 
 .header_left a .logo_without_text {
     display: none;
+    width: 41px;
 }
 
 .header_center {
@@ -57,13 +59,13 @@ a {
     margin: auto;
 }
 
-.header_center>.flex_row>ul.push_campain_keywords {
+.header_center>.flex_row>ul.push_campaign_keywords {
     list-style-type: none;
     display: flex;
-    gap: 15px;
+    justify-content: space-evenly;
 }
 
-.header_center>.flex_row>ul.push_campain_keywords li a {
+.header_center>.flex_row>ul.push_campaign_keywords li a {
     text-decoration: none;
     color: white;
     font-size: 0.85rem;
@@ -115,8 +117,7 @@ a {
 .header_right .flex_row {
     margin: auto;
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
 }
 
 .header_right .header_item {
@@ -191,23 +192,24 @@ a {
 
 /* MOBILE */
 .shadow_layer {
+    display: none;
     width: 100%;
     height: 100%;
     position: fixed;
     background-color: black;
-    z-index: 5;
+    z-index: 15;
     opacity: 60%;
 }
 
 .hamburger_menu {
-    width: 80%;
+    display: none;
     height: 100%;
     position: fixed;
-    z-index: 10;
-    min-width: 300px;
+    z-index: 20;
     background-color: white;
     overflow-y: scroll;
     overflow-x: hidden;
+    transition: 300ms;
 }
 
 .hamburger_menu .list_menu_main {
@@ -264,6 +266,50 @@ a {
     -webkit-transform: rotate(135deg);
 }
 
+#campaign_area {
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+}
+
+#campaign_area>.flex_row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+#campaign_area>.flex_row>.slider>.container {}
+
+#campaign_area>.flex_row>.slider>.container {
+    max-width: 640px;
+    overflow: hidden;
+}
+
+#campaign_area>.flex_row>.slider>.container>.slides {
+    display: flex;
+    width: 500%;
+    list-style-type: none;
+}
+
+#campaign_area>.flex_row>.slider>.container>.slides>.slide {}
+
+#campaign_area>.flex_row>.slider>.container>.slides>.slide>.banner_link {
+    text-align: center;
+    text-decoration: none;
+}
+
+#campaign_area>.flex_row>.slider>.container>.slides>.slide>.banner_link>.banner {
+    width: 100%;
+    height: auto;
+}
+
+#campaign_area>.flex_row>.banner_right {
+    display: block;
+}
+
+#campaign_area>.flex_row>.banner_right img {
+    width: 460px;
+    height: auto;
+}
 
 @media screen and (max-width: 575px) {
 
@@ -280,23 +326,43 @@ a {
 
 /* DESKTOP */
 @media screen and (max-width: 760px) {
-    .header_center ul.push_campain_keywords {
+    .header_center ul.push_campaign_keywords {
         display: none;
     }
 
     .header_left a .logo_without_text {
         display: inline;
     }
-}
 
-@media screen and (max-width: 760px) {
     .header_left .logo_with_text {
         display: none;
     }
+
+    #campaign_area {}
+}
+
+.home_page_content {
+    height: 2000px;
+    background-color: #f1f0f5;
+}
+
+.home_page_content>.category_buttons {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home_page_content>.category_buttons>.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.home_page_content>.category_buttons>.col img {
 }
 
 @media screen and (max-width: 965px) {
-    .header_center>.flex_row>ul.push_campain_keywords {
+    .header_center>.flex_row>ul.push_campaign_keywords {
         display: none;
     }
 
@@ -311,12 +377,28 @@ a {
     .top_menu {
         display: none;
     }
+
+    #campaign_area {
+        padding-top: 70px;
+        background-color: #326e51;
+        border-left: solid 6px #326e51;
+        border-right: solid 6px #326e51;
+    }
+
+
+    #campaign_area>.flex_row>.slider>.container>.slides>.slide>.banner_link>.banner {
+        border-radius: 10px;
+    }
 }
 
 @media screen and (max-width: 1050px) {}
 
 @media screen and (max-width: 1280px) {
     .header_right .header_item .text_container {
+        display: none;
+    }
+
+    #campaign_area>.flex_row>.banner_right {
         display: none;
     }
 }
