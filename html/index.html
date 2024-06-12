@@ -216,7 +216,7 @@
         <div class="flex_row">
             <div class="slider">
                 <div class="container">
-                    <ul class="slides">
+                    <ul id="slides" class="slides">
                         <li class="slide">
                             <a class="banner_link" href="https://hasaki.vn/campaign/khai-truong-chi-nhanh-193-194">
                                 <img class="banner" src="https://media.hcdn.vn/hsk/1716890808banner-home-mobile.png"
@@ -248,6 +248,10 @@
                             </a>
                         </li>
                     </ul>
+                    <div id="slide_navigator" class="slide_navigator" style="width:100%">
+                        <div id="slide_arrow_left" class="arrow_left">&#10094;</div>
+                        <div id="slide_arrow_right" class="arrow_right">&#10095;</div>
+                    </div>
                 </div>
             </div>
 
@@ -268,46 +272,294 @@
     </div>
     <div class="home_page_content">
         <div class="category_buttons">
-            <div class="col">
-                <a class="category_button categories" href="">
-                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-danh-muc.png" alt="">
-                    Danh muc
-                </a>
-                <a class="category_button order_tracking" href="">
-                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-tra-cuu-don-hang.png" alt="">
-                </a>
+            <div class="container">
+                <div class="col">
+                    <a class="category_button categories" href="">
+                        <img src="https://media.hcdn.vn/hsk/icon/hasaki-danh-muc.png" alt="">
+                        <div class="title">Danh mục</div>
+                    </a>
+                    <a class="category_button order_tracking" href="">
+                        <img src="https://media.hcdn.vn/hsk/icon/hasaki-tra-cuu-don-hang.png" alt="">
+                        <div class="title">Tra cứu đơn hàng</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="category_button new_arrivals" href="">
+                        <img src="https://media.hcdn.vn/hsk/icon/hsk-icon-hang-moi-ve.png" alt="">
+                        <div class="title">Hàng mới về</div>
+                    </a>
+                    <a class="category_button best_selling" href="">
+                        <img src="https://media.hcdn.vn/hsk/icon/hasaki-number-1.png" alt="">
+                        <div class="title">Bán chạy</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="category_button ship_now" href="">
+                        <img src="https://media.hcdn.vn/hsk/icon/hasaki-nowfree.png" alt="">
+                        <div class="title">Giao 2H</div>
+                    </a>
+                    <a class="category_button hot_sales" href="">
+                        <img src="https://media.hcdn.vn/hsk/icon/hsk-icon-sale-80.png" alt="">
+                        <div class="title">Hot Sale đến 80%</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="category_button clinic_spa" href="">
+                        <img src="https://media.hcdn.vn/hsk/icon/hasaki-clinic.png" alt="">
+                        <div class="title">Clinic & Spa</div>
+                    </a>
+                    <a class="category_button booking" href="">
+                        <img src="https://media.hcdn.vn/hsk/icon/hasaki-dat-hen.png" alt="">
+                        <div class="title">Đặt hẹn</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="category_button prices" href="">
+                        <img src="https://media.hcdn.vn/hsk/icon/hasaki-bang-gia.png" alt="">
+                        <div class="title">Bảng giá</div>
+                    </a>
+                    <a class="category_button guidebook" href="">
+                        <img src="https://media.hcdn.vn/hsk/icon/hasaki-cam-nang.png" alt="">
+                        <div class="title">Cẩm nang</div>
+                    </a>
+                </div>
             </div>
-            <div class="col">
-                <a class="category_button new_arrivals" href="">
-                    <img src="https://media.hcdn.vn/hsk/icon/hsk-icon-hang-moi-ve.png" alt="">
-                </a>
-                <a class="category_button best_selling" href="">
-                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-number-1.png" alt="">
-                </a>
+        </div>
+
+        <div class="hot_deals">
+            <div class="title">
+                DEAL NỔI BẬT
             </div>
-            <div class="col">
-                <a class="category_button ship_now" href="">
-                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-nowfree.png" alt="">
-                </a>
-                <a class="category_button hot_sales" href="">
-                    <img src="https://media.hcdn.vn/hsk/icon/hsk-icon-sale-80.png" alt="">
-                </a>
-            </div>
-            <div class="col">
-                <a class="category_button clinic_spa" href="">
-                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-clinic.png" alt="">
-                </a>
-                <a class="category_button booking" href="">
-                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-dat-hen.png" alt="">
-                </a>
-            </div>
-            <div class="col">
-                <a class="category_button prices" href="">
-                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-bang-gia.png" alt="">
-                </a>
-                <a class="category_button guidebook" href="">
-                    <img src="https://media.hcdn.vn/hsk/icon/hasaki-cam-nang.png" alt="">
-                </a>
+            <div class="slider">
+                <div class="container">
+                    <div class="list_product">
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="box_shadow">
+                                <div class="card">
+                                    <a href="">
+                                        <img src="https://media.hcdn.vn/catalog/product/p/r/promotions-auto--200400003-15479-nuoc-tay-trang-bioderma-danh-cho-da-nhay-cam-500ml_uAuEi7ofrD1Ss1y7_img_320x320_b04c1a_fit_center.png" alt="">
+                                    </a>
+                                    <div class="product_info">
+                                        <a href="">
+                                            <strong class="price">393,000 đ</strong>
+                                            <strong class="brand">Bioderma</strong>
+                                            <div class="name">Nước Tẩy Trang Bioderma Dành Cho Da Nhạy Cảm 500ml</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

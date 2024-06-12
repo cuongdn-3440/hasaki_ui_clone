@@ -277,8 +277,6 @@ a {
     gap: 5px;
 }
 
-#campaign_area>.flex_row>.slider>.container {}
-
 #campaign_area>.flex_row>.slider>.container {
     max-width: 640px;
     overflow: hidden;
@@ -288,9 +286,15 @@ a {
     display: flex;
     width: 500%;
     list-style-type: none;
+    translate: 0px;
+    position: relative;
+    left: 0px;
+    transition: 500ms;
 }
 
-#campaign_area>.flex_row>.slider>.container>.slides>.slide {}
+#campaign_area>.flex_row>.slider>.container>.slides>.slide {
+
+}
 
 #campaign_area>.flex_row>.slider>.container>.slides>.slide>.banner_link {
     text-align: center;
@@ -302,6 +306,30 @@ a {
     height: auto;
 }
 
+#campaign_area>.flex_row>.slider>.container>.slide_navigator {
+    position: relative;
+    top: -40px;
+}
+
+#campaign_area>.flex_row>.slider>.container>.slide_navigator>.arrow_left {
+    float: left;
+}
+
+#campaign_area>.flex_row>.slider>.container>.slide_navigator>.arrow_right {
+    float: right;
+}
+
+#campaign_area>.flex_row>.slider>.container>.slide_navigator>.arrow_left,.arrow_right {
+    cursor: pointer;
+    opacity: 15%;
+    color: black;
+    font-size: 1.5rem;
+}
+
+#campaign_area>.flex_row>.slider>.container>.slide_navigator>.arrow_left:hover,.arrow_right:hover {
+    opacity: 40%;
+}
+
 #campaign_area>.flex_row>.banner_right {
     display: block;
 }
@@ -309,6 +337,110 @@ a {
 #campaign_area>.flex_row>.banner_right img {
     width: 460px;
     height: auto;
+}
+
+.home_page_content {
+    height: 2000px;
+    background-color: #f1f0f5;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.category_buttons {
+    padding-top: 10px;
+    overflow: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.category_buttons>.container {
+    width: 440px;
+    display: flex;
+    gap: 10px;
+}
+
+.category_buttons>.container>.col {
+    width: 80px;
+}
+
+.category_buttons>.container>.col a {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.8rem;
+}
+
+.category_buttons>.container>.col>a>img {
+    width: 50px;
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+.category_buttons>.container>.col>a>.title {
+    height: 36px;
+}
+
+.hot_deals>.title {
+    color: #ff235c;
+    line-height: 45px;
+    font-weight: 700;
+}
+
+.hot_deals>.slider>.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hot_deals>.slider>.container>.list_product {
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.hot_deals>.slider>.container>.list_product>.product {
+    max-width: 160px;
+    margin-right: 5px;
+}
+
+.hot_deals>.slider>.container>.list_product>.product>.box_shadow {
+    box-shadow: 0 4px 4px -3px rgba(0,0,0,0.1);
+}
+
+.hot_deals>.slider>.container>.list_product>.product>.box_shadow>.card {
+    height: 280px;
+    background-color: white;
+}
+
+.hot_deals>.slider>.container>.list_product>.product>.box_shadow>.card>a {
+}
+
+.hot_deals>.slider>.container>.list_product>.product>.box_shadow>.card>a>img {
+    width: 160px;
+}
+
+
+.hot_deals>.slider>.container>.list_product>.product>.box_shadow>.card>.product_info {
+    padding: 5px;
+}
+
+.hot_deals>.slider>.container>.list_product>.product>.box_shadow>.card>.product_info>a {
+    color: #333;
+    text-decoration: none;
+}
+
+.hot_deals>.slider>.container>.list_product>.product>.box_shadow>.card>.product_info .name {
+    font-size: 0.85rem;
+}
+
+.hot_deals>.slider>.container>.list_product>.product>.box_shadow>.card>.product_info .price {
+    display: block;
+    margin-bottom: 3px;
+    color: #f60;
+}
+
+.hot_deals>.slider>.container>.list_product>.product>.box_shadow>.card>.product_info .brand {
+    color: #326e51;
+    font-size: 0.9rem;
 }
 
 @media screen and (max-width: 575px) {
@@ -337,28 +469,6 @@ a {
     .header_left .logo_with_text {
         display: none;
     }
-
-    #campaign_area {}
-}
-
-.home_page_content {
-    height: 2000px;
-    background-color: #f1f0f5;
-}
-
-.home_page_content>.category_buttons {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.home_page_content>.category_buttons>.col {
-    display: flex;
-    flex-direction: column;
-}
-
-.home_page_content>.category_buttons>.col img {
 }
 
 @media screen and (max-width: 965px) {
@@ -384,7 +494,6 @@ a {
         border-left: solid 6px #326e51;
         border-right: solid 6px #326e51;
     }
-
 
     #campaign_area>.flex_row>.slider>.container>.slides>.slide>.banner_link>.banner {
         border-radius: 10px;
